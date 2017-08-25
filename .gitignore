@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-
+src/environments/firebase.ts
 # dependencies
 /node_modules
 

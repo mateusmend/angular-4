@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +22,8 @@ const config = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    FormsModule
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]
