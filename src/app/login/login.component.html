@@ -2,17 +2,19 @@
   <form>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
+        <input [(ngModel)]="login.Login" name="email" type="email" class="validate">
         <label for="email">Email</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
+        <input [(ngModel)]="login.Senha" name="password" type="password" class="validate">
         <label for="password">Senha</label>
       </div>
+      {{login | json}}
     </div>
   </form>
-  <button (click)="teste()" class="waves-effect waves-light btn">Cadastrar</button>
+  <button (click)="ValidarLogin()" class="waves-effect waves-light btn">Cadastrar</button>
+  <button (click)="cadastrarGoogle()" class="waves-effect waves-light btn blue">Login com Gmail</button>
 </div>
 <br>
