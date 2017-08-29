@@ -11,10 +11,11 @@
         <input [(ngModel)]="login.Senha" name="password" type="password" class="validate">
         <label for="password">Senha</label>
       </div>
-      {{login | json}}
     </div>
+    {{NomeUser}}
   </form>
-  <button (click)="ValidarLogin()" class="waves-effect waves-light btn">Cadastrar</button>
+  <button (click)="Login(login)" class="waves-effect green waves-light btn">Login</button>
+  <button (click)="CadastrarLoginEmailPassword(login)" class="waves-effect light-green waves-light btn">Cadastrar</button>
   <button (click)="cadastrarGoogle()" class="waves-effect waves-light btn blue">Login com Gmail</button>
 </div>
 <br>
