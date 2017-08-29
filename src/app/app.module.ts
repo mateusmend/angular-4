@@ -6,6 +6,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { AngularFireDatabase } from 'angularfire2/database';
 const config = {
   apiKey: 'AIzaSyC9hsy4nq2c5SFjgZVEbZnQ6BcS8jZ2HBs',
   authDomain: 'angular-4-auth.firebaseapp.com',
@@ -25,7 +26,7 @@ const config = {
     AngularFireModule.initializeApp(config),
     FormsModule
   ],
-  providers: [AngularFireAuth],
+  providers: [AngularFireAuth, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
